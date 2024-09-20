@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+  <title>翻译熊</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="assets/tachyons.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/x-icon" href="bear.png">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 3rem;
+      font-family: "PT Sans", sans-serif;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row"
+    style="display: flex;flex-direction: column;  align-items: center; height:90vh;width:100vw;justify-content: center;">
+
+    <div class="lds-spinner" id="loading-anim" style="visibility: hidden;">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <img src="bear2.svg" alt="My Happy SVG" style="width:200px" />
+
+    <div class="breath purple" style="padding-top: 20px; font-size:1rem;visibility: visible; " id="hint">
+      复制想要翻译的文本，然后点翻译
+    </div>
+
+    <div style="display: flex;">
+      <div style="text-align: center; padding-right:30px">
+        <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-purple my-button" id="btn-tran">翻译</a>
+      </div>
+      <div style="text-align: center;">
+        <a class="f6 link dim br1 ph3 pv2 mb2 dib white bg-purple my-button" id="btn-copy">复制</a>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="/assets/jquery-3.7.1.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
