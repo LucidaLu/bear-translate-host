@@ -3,12 +3,20 @@ const host = 'https://82.156.12.45:9204';
 
 let results = undefined;
 async function setClipboard(txt, html) {
-  await navigator.clipboard.write([
-    new ClipboardItem({
-      "text/plain": new Blob([txt], { type: "text/plain" }),
-      "text/html": new Blob([html], { type: "text/html" })
-    }),
-  ]);
+  if (html == "") {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        "text/plain": new Blob([txt], { type: "text/plain" }),
+      }),
+    ]);
+  } else {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        "text/plain": new Blob([txt], { type: "text/plain" }),
+        "text/html": new Blob([html], { type: "text/html" })
+      }),
+    ]);
+  }
 }
 
 function updateHint(t) {
