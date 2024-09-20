@@ -43,7 +43,11 @@ async function translate() {
           const data = JSON.parse(resp);
           results = data;
           $('#loading-anim').css("visibility", "hidden");
-          updateHint("好啦！可以复制结果啦！");
+          if (data.txt === "") {
+            updateHint("小熊不会了，这个好难");
+          } else {
+            updateHint("好啦！可以复制结果啦！");
+          }
         }
       });
     }
