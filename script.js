@@ -1,5 +1,5 @@
 // const host = 'http://127.0.0.1:9211';
-const host = 'http://82.156.12.45:9204';
+const host = 'https://82.156.12.45:9204';
 
 let results = undefined;
 async function setClipboard(txt, html) {
